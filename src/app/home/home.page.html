@@ -1,0 +1,30 @@
+<div class="header">
+  <ion-toolbar>
+    <div class="toolbar-container">
+      <ion-buttons>
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>title</ion-title>
+      <ion-button shape="round" slot="end">
+        <ion-icon slot="icon-only" name="notifications" size="small"></ion-icon>
+      </ion-button>
+    </div>
+    <div class="avatar-container">
+      <ion-avatar slot="start">
+        <img
+          alt="Silhouette of a person's head"
+          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+        />
+      </ion-avatar>
+      <ion-label>Profile name</ion-label>
+    </div>
+  </ion-toolbar>
+</div>
+
+<ion-content [fullscreen]="true">
+  <div class="carousel-container">
+    <div>carousel 1</div>
+    <div>carousel 2</div>
+    <div>carousel 3</div>
+  </div>
+</ion-content>
