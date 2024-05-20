@@ -14,7 +14,7 @@ export class FolderPage implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.section = [{ name: 'personal online' }, { name: 'programas' }];
+    this.section = [{ name: 'personal online' }, { name: 'programas' }, { name: 'conteúdos' }];
     this.folder = this.activatedRoute.snapshot.paramMap.get('id') as string;
   }
 }
