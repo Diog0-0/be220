@@ -1,2 +1,31 @@
 // For information on how to create your own theme, please see:
 // http://ionicframework.com/docs/theming/
+:root {
+  --black-color: #000;
+  --orange-color: #f07d07;
+  --purple-color: #6635dd;
+
+  ion-button.black-color {
+    --background: var(--black-color);
+  }
+
+  ion-icon.orange-color {
+    color: var(--orange-color);
+  }
+}
+
+//COLORS
+.black-color {
+  color: var(--black-color);
+}
+.orange-color {
+  color: var(--orange-color);
+}
+.purple-color {
+  color: var(--purple-color);
+}
+
+//BACKGROUNDS
+.bg-black-color {
+  background-color: var(--black-color);
+}
