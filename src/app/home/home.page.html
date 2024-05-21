@@ -8,7 +8,7 @@
       <!-- title or img start -->
       <p>title</p>
       <!-- notification button start -->
-      <ion-button shape="round" slot="end" class="black-color">
+      <ion-button shape="round" slot="end" class="black-color ion-activatable">
         <ion-icon
           slot="icon-only"
           name="notifications"
@@ -34,10 +34,30 @@
 </div>
 <!-- principal content start -->
 <ion-content [fullscreen]="true">
-  <div class="carousel-container">
-    <div>carousel 1</div>
-    <div>carousel 2</div>
-    <div>carousel 3</div>
-    <app-card />
+  <div class="content-section">
+    <p>Personal online</p>
+    <div class="carousel-container">
+      <app-card
+        title="levantamento de peso"
+        label="continuar treinando"
+        class="carousel-item"
+      />
+    </div>
+  </div>
+  <div class="content-section">
+    <p>Programas</p>
+    <div class="carousel-container">
+      <app-card title="levantamento de peso" label="continuar treinando" />
+      <app-card title="levantamento de peso" label="continuar treinando" />
+      <app-card title="levantamento de peso" label="continuar treinando" />
+    </div>
+  </div>
+  <div class="content-section">
+    <p>Conteúdos</p>
+    <div class="carousel-container">
+      <app-card title="levantamento de peso" label="continuar treinando" />
+      <app-card title="levantamento de peso" label="continuar treinando" />
+      <app-card title="levantamento de peso" label="continuar treinando" />
+    </div>
   </div>
 </ion-content>

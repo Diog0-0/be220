@@ -35,3 +35,23 @@
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
 @import "@ionic/angular/css/palettes/dark.system.css";
+
+/**
+ * Google fonts import style and full axis weight
+ */
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+
+/**
+ * Additional global modifications
+ */
+
+html {
+  --ion-dynamic-font: var(--ion-default-dynamic-font);
+  --ion-font-family: "Roboto Condensed", sans-serif;
+}
+
+p {
+  margin: 0;
+  padding: 0;
+}
