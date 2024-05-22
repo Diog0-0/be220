@@ -6,14 +6,19 @@
         <ion-menu-button />
       </ion-buttons>
       <!-- title or img start -->
-      <p>title</p>
+      <ion-text>title</ion-text>
       <!-- notification button start -->
-      <ion-button shape="round" slot="end" class="black-color ion-activatable">
+      <ion-button
+        shape="round"
+        slot="end"
+        color="dark"
+        class="black-color ion-activatable"
+      >
         <ion-icon
           slot="icon-only"
           name="notifications"
           size="small"
-          class="orange-color"
+          color="primary"
         />
       </ion-button>
     </div>
@@ -26,8 +31,8 @@
         />
       </ion-avatar>
       <div>
-        <p>name</p>
-        <small class="purple-color">label</small>
+        <p class="avatar-name">Leonardo Santos</p>
+        <ion-text color="tertiary">label</ion-text>
       </div>
     </div>
   </ion-toolbar>
@@ -35,29 +40,36 @@
 <!-- principal content start -->
 <ion-content [fullscreen]="true">
   <div class="content-section">
-    <p>Personal online</p>
+    <p class="content-title">Personal online</p>
     <div class="carousel-container">
       <app-card
-        title="levantamento de peso"
-        label="continuar treinando"
-        class="carousel-item"
+        *ngFor="let slide of slidesPersonal"
+        [title]="slide.title"
+        [label]="slide.label"
+        [icon]="slide.icon"
+        [type]="slide.type"
       />
     </div>
   </div>
   <div class="content-section">
-    <p>Programas</p>
+    <p class="content-title">Programas</p>
     <div class="carousel-container">
-      <app-card title="levantamento de peso" label="continuar treinando" />
-      <app-card title="levantamento de peso" label="continuar treinando" />
-      <app-card title="levantamento de peso" label="continuar treinando" />
+      <app-card
+        *ngFor="let slide of slidesTreinos"
+        [title]="slide.title"
+        [label]="slide.label"
+      />
     </div>
   </div>
   <div class="content-section">
-    <p>Conteúdos</p>
-    <div class="carousel-container">
-      <app-card title="levantamento de peso" label="continuar treinando" />
-      <app-card title="levantamento de peso" label="continuar treinando" />
-      <app-card title="levantamento de peso" label="continuar treinando" />
-    </div>
+    <p class="content-title">Conteúdos</p>
+    <!-- <div class="carousel-container">
+      <app-card
+        *ngFor="let slide of slides"
+        [title]="slide.title"
+        [label]="slide.label"
+        class="carousel-item"
+      />
+    </div> -->
   </div>
 </ion-content>

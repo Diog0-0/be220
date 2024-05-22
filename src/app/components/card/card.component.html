@@ -1,10 +1,21 @@
-<button type="button" class="card-container">
-  <img
-    alt="man lifting weight image"
-    src="../../../assets/cards/lifting-weight.jpg"
-  />
-  <div class="card-content">
-    <p class="card-label orange-color">{{ label }}</p>
-    <p class="card-title">{{ title }}</p>
+<ion-button fill="clear" class="card-container">
+  <div [class]="type === 'new' ? 'card-content new' : 'card-content normal'">
+    <div *ngIf="type === 'new'" class="backdrop-filter z-2"></div>
+    <ion-icon
+      slot="icon-only"
+      *ngIf="icon && type === 'new'"
+      [name]="icon"
+      color="light"
+      class="z-20"
+      style="width: 50px; height: 50px; padding-right: 10px"
+    />
+    <div class="textos">
+      <ion-text color="primary" class="card-label z-20" *ngIf="label">{{
+        label
+      }}</ion-text>
+      <ion-text color="light" class="card-title z-20" *ngIf="title">{{
+        title
+      }}</ion-text>
+    </div>
   </div>
-</button>
+</ion-button>

@@ -40,7 +40,7 @@
  * Google fonts import style and full axis weight
  */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
 
 /**
  * Additional global modifications
@@ -48,10 +48,22 @@
 
 html {
   --ion-dynamic-font: var(--ion-default-dynamic-font);
-  --ion-font-family: "Roboto Condensed", sans-serif;
+  --ion-font-family: "Oswald", sans-serif;
 }
 
 p {
   margin: 0;
-  padding: 0;
+  padding: 5px 0;
+}
+
+.z-2 {
+  z-index: 2;
+}
+
+.z-10 {
+  z-index: 10;
+}
+
+.z-20 {
+  z-index: 20;
 }
