@@ -1,38 +1,26 @@
-<div class="header">
-  <ion-toolbar>
+<div>
+  <ion-toolbar color="secondary">
     <div class="toolbar-container">
       <!-- menu button start -->
       <ion-buttons>
-        <ion-menu-button />
+        <ion-menu-button color="light" />
       </ion-buttons>
-      <!-- title or img start -->
-      <ion-text>title</ion-text>
+      <!-- logo or img start -->
+      <app-logo />
       <!-- notification button start -->
-      <ion-button
-        shape="round"
-        slot="end"
-        color="dark"
-        class="black-color ion-activatable"
-      >
-        <ion-icon
-          slot="icon-only"
-          name="notifications"
-          size="small"
-          color="primary"
-        />
-      </ion-button>
+      <app-notification />
     </div>
     <!-- avatar section start -->
-    <div class="avatar-container">
-      <ion-avatar slot="start">
+    <div class="avatar-container my-2">
+      <ion-avatar slot="start" style="height: 70px; width: 70px">
         <img
           alt="Silhouette of a person's head"
           src="https://ionicframework.com/docs/img/demos/avatar.svg"
         />
       </ion-avatar>
-      <div>
-        <p class="avatar-name">Leonardo Santos</p>
-        <ion-text color="tertiary">label</ion-text>
+      <div class="flex-col ml-2">
+        <ion-text class="avatar-name">{{user.name}}</ion-text>
+        <ion-text color="tertiary" class="avatar-level">{{user.level}}</ion-text>
       </div>
     </div>
   </ion-toolbar>
@@ -48,6 +36,7 @@
         [label]="slide.label"
         [icon]="slide.icon"
         [type]="slide.type"
+        class="mr-2"
       />
     </div>
   </div>
@@ -58,6 +47,7 @@
         *ngFor="let slide of slidesTreinos"
         [title]="slide.title"
         [label]="slide.label"
+        class="mr-2"
       />
     </div>
   </div>

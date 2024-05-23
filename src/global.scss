@@ -56,6 +56,18 @@ p {
   padding: 5px 0;
 }
 
+.flex{
+  display: flex;
+}
+
+.flex-col{
+  display: flex;
+  flex-direction: column;
+}
+
+.z-0 {
+  z-index: 0;
+}
 .z-2 {
   z-index: 2;
 }
@@ -66,4 +78,66 @@ p {
 
 .z-20 {
   z-index: 20;
+}
+//custom vars margin top
+.mt-2 {
+  margin-top: 1rem;
+}
+.mt-4 {
+  margin-top: 1.5rem;
+}
+.mt-6 {
+  margin-top: 2rem;
+}
+.mt-8 {
+  margin-top: 2.5rem;
+}
+//custom vars margin left
+.ml-2 {
+  margin-left: 1rem;
+}
+.ml-4 {
+  margin-left: 1.5rem;
+}
+.ml-6 {
+  margin-left: 2rem;
+}
+.ml-8 {
+  margin-left: 2.5rem;
+}
+//custom vars margin right
+.mr-2 {
+  margin-right: 1rem;
+}
+.mr-4 {
+  margin-right: 1.5rem;
+}
+.mr-6 {
+  margin-right: 2rem;
+}
+.mr-8 {
+  margin-right: 2.5rem;
+}
+//custom vars margin top
+.mb-2 {
+  margin-bottom: 1rem;
+}
+.mb-4 {
+  margin-bottom: 1.5rem;
+}
+.mb-6 {
+  margin-bottom: 2rem;
+}
+.mb-8 {
+  margin-bottom: 2.5rem;
+}
+//custom margin y axis
+.my-2 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+//custom padding y axis
+.py-2 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }

@@ -16,7 +16,7 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit() {
-    console.log('init')
+    console.log('init cards')
   }
 
 }

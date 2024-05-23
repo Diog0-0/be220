@@ -6,13 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['app.component.scss'],
 })
 export class AppComponent {
-  public menuItens = [
-    { title: 'Inbox', url: '/inbox', },
-    { title: 'Outbox', url: '/outbox', },
-    { title: 'Favorites', url: '/favorites', },
-    { title: 'Archived', url: '/archived', },
-    { title: 'Trash', url: '/trash', },
-    { title: 'Spam', url: '/spam', },
+  public menuItens: { title: string, url: string, disable: boolean }[] = [
+
   ];
-  constructor() { }
+  constructor() {
+    this.menuItens = [
+      { title: 'Planilha de treinos', url: '/workout', disable: true },
+      { title: 'Evolução', url: '/evolution', disable: true },
+      { title: 'Treinos favoritos', url: '/favorite-workout', disable: true },
+      { title: 'Ajuda', url: '/help', disable: true },
+    ]
+  }
 }

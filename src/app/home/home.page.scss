@@ -1,9 +1,5 @@
-ion-header {
-  --background: #202020;
-}
-
 ion-toolbar {
-  padding: 10px 20px;
+  padding: 5px 20px;
   // border-radius: 0 0 50px 50px;
 
   @media only screen and (max-width: 768px) {
@@ -25,18 +21,15 @@ ion-toolbar {
 }
 
 .avatar-container {
-  margin-top: 20px;
-  margin-bottom: 20px;
   padding: 0 20px;
   width: 100%;
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 20px;
 }
 
 .avatar-name {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .content-title {
@@ -48,7 +41,5 @@ ion-toolbar {
   display: flex;
   justify-content: flex-start;
   align-items: flex-end;
-
-  // max-width: 90%;
   overflow-x: scroll;
 }

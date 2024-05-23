@@ -2,7 +2,6 @@
   width: 250px;
   height: 150px;
 
-  box-shadow: inset;
   position: relative;
 
   border-radius: 10px;
@@ -13,6 +12,12 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+// .card-container-img {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+// }
 
 ion-icon {
   --ionicon-stroke-width: 16px;
@@ -59,6 +64,7 @@ ion-icon {
   height: 100%;
   width: 100%;
   position: absolute;
+  border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.685);
   opacity: 0.8;
 }

@@ -1,35 +1,31 @@
 <ion-app>
-  <ion-split-pane contentId="main-content">
+  <ion-split-pane when="md" contentId="main-content">
     <!-- Menu start -->
     <ion-menu contentId="main-content" type="overlay">
-      <ion-content>
+      <ion-content color="secondary">
         <ion-list id="inbox-list">
-          <ion-list-header>Menu</ion-list-header>
+          <ion-list-header
+            ><ion-text class="header-title mb-2" >Menu</ion-text></ion-list-header
+          >
 
           <ion-menu-toggle
             auto-hide="false"
             *ngFor="let p of menuItens; let i = index"
           >
             <ion-item
+              color="black"
               routerDirection="root"
-              [routerLink]="[p.url]"
+              [routerLink]="p.url"
+              [disabled]="p.disable"
               routerLinkActive="selected"
-              lines="none"
+              lines="primary"
               detail="false"
             >
               <ion-label>{{ p.title }}</ion-label>
+              <ion-badge *ngIf="p.disable" color="primary">em breve</ion-badge>
             </ion-item>
           </ion-menu-toggle>
         </ion-list>
-
-        <!-- <ion-list id="labels-list">
-          <ion-list-header>Labels</ion-list-header>
-
-          <ion-item *ngFor="let label of labels" lines="none">
-            <ion-icon aria-hidden="true" slot="start" ios="bookmark-outline" md="bookmark-sharp"></ion-icon>
-            <ion-label>{{ label }}</ion-label>
-          </ion-item>
-        </ion-list> -->
       </ion-content>
     </ion-menu>
     <!-- Page route start -->

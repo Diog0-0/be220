@@ -33,6 +33,7 @@ export class HomePage implements OnInit, OnDestroy {
       }
     ];
 
+    this.user = { name: 'Leonardo Santos', level: 'Nivel roxo' }
   }
 
   ngOnInit() {
