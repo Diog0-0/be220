@@ -10,6 +10,7 @@ export class CardComponent implements OnInit {
   @Input() label: string = ""
   @Input() icon: string = ""
   @Input() type: string = ""
+  @Input() img_path: string = ""
 
   constructor() {
 

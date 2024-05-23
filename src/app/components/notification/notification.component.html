@@ -1,8 +1,11 @@
-<ion-button shape="round" slot="end" color="dark">
-  <ion-icon
-    slot="icon-only"
-    name="notifications"
-    size="small"
-    color="primary"
-  />
-</ion-button>
+<div class="notification-container">
+  <ion-icon name="ellipse" color="medium" class="new-notification z-20" *ngIf="newNotification"/>
+  <ion-button shape="round" slot="end" color="dark" class="notification-button z-10">
+    <ion-icon
+      slot="icon-only"
+      name="notifications"
+      size="small"
+      color="primary"
+    />
+  </ion-button>
+</div>

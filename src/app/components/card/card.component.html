@@ -1,4 +1,8 @@
-<ion-button fill="clear" class="card-container ">
+<ion-button
+  fill="clear"
+  class="card-container"
+  [style.backgroundImage]="img_path ? 'url(' + img_path + ')' : ''"
+>
   <!-- <img
     src="../../../assets/cards/lifting-weight.jpg"
     alt="background image from button"

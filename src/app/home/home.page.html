@@ -1,26 +1,45 @@
 <div>
   <ion-toolbar color="secondary">
-    <div class="toolbar-container">
+    <div class="toolbar-header flex">
       <!-- menu button start -->
-      <ion-buttons>
-        <ion-menu-button color="light" />
-      </ion-buttons>
+      <ion-menu-button color="light" mode="ios" />
+
       <!-- logo or img start -->
-      <app-logo />
+      <app-logo style="flex: 1" />
       <!-- notification button start -->
       <app-notification />
     </div>
     <!-- avatar section start -->
-    <div class="avatar-container my-2">
-      <ion-avatar slot="start" style="height: 70px; width: 70px">
+    <div class="avatar-container flex my-2">
+      <ion-avatar
+        slot="start"
+        class="cursor-pointer"
+        style="height: 70px; width: 70px"
+      >
         <img
           alt="Silhouette of a person's head"
-          src="https://ionicframework.com/docs/img/demos/avatar.svg"
+          [src]="user.avatar_path ? user.avatar_path : 'https://ionicframework.com/docs/img/demos/avatar.svg'"
         />
       </ion-avatar>
+
       <div class="flex-col ml-2">
         <ion-text class="avatar-name">{{user.name}}</ion-text>
-        <ion-text color="tertiary" class="avatar-level">{{user.level}}</ion-text>
+        <ion-text color="tertiary" class="avatar-level"
+          >{{user.level}}</ion-text
+        >
+      </div>
+    </div>
+    <!-- extra-functions section start -->
+    <div class="w-100 flex items-center justify-center">
+      <div class="extra-functions flex items-center justify-center">
+        <ion-button fill="clear" shape="round" size="small" class="extra-button"
+          ><ion-icon slot="start" name="accessibility-outline"></ion-icon>
+          Meu corpo
+        </ion-button>
+        <ion-button fill="clear" shape="round" size="small" class="extra-button"
+          ><ion-icon slot="start" name="trophy"></ion-icon>
+          Objetivos e conquistas
+        </ion-button>
       </div>
     </div>
   </ion-toolbar>
@@ -28,38 +47,51 @@
 <!-- principal content start -->
 <ion-content [fullscreen]="true">
   <div class="content-section">
-    <p class="content-title">Personal online</p>
-    <div class="carousel-container">
+    <div class="flex">
+      <p class="content-title">Personal online</p>
+      <ion-button fill="clear" shape="round" slot="end" class="card-container"
+        ><ion-icon slot="icon-only" name="add-circle-outline" color="primary"
+      /></ion-button>
+    </div>
+    <div class="carousel-container flex">
       <app-card
         *ngFor="let slide of slidesPersonal"
         [title]="slide.title"
-        [label]="slide.label"
+        [label]="slide.label || ''"
         [icon]="slide.icon"
         [type]="slide.type"
+        [img_path]="slide.img_path"
         class="mr-2"
       />
     </div>
   </div>
   <div class="content-section">
-    <p class="content-title">Programas</p>
-    <div class="carousel-container">
+    <div class="flex items-center">
+      <p class="content-title">Programas</p>
+      <!-- aparece badge se tiver programa de treino na data de hoje -->
+      <ion-badge color="primary" class="flex items-center justify-center"
+        ><ion-text color="light" class="badge-text">novo</ion-text></ion-badge
+      >
+    </div>
+    <div class="carousel-container flex">
       <app-card
         *ngFor="let slide of slidesTreinos"
         [title]="slide.title"
-        [label]="slide.label"
+        [label]="slide.label || ''"
+        [img_path]="slide.img_path"
         class="mr-2"
       />
     </div>
   </div>
   <div class="content-section">
     <p class="content-title">Conteúdos</p>
-    <!-- <div class="carousel-container">
+    <div class="carousel-container flex">
       <app-card
-        *ngFor="let slide of slides"
+        *ngFor="let slide of slidesContent"
         [title]="slide.title"
-        [label]="slide.label"
+        [label]="slide.label|| 'Em breve'"
         class="carousel-item"
       />
-    </div> -->
+    </div>
   </div>
 </ion-content>

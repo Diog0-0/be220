@@ -56,13 +56,25 @@ p {
   padding: 5px 0;
 }
 
-.flex{
+.flex {
   display: flex;
 }
 
-.flex-col{
+.justify-center {
+  justify-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-col {
   display: flex;
   flex-direction: column;
+}
+
+.w-100{
+  width: 100%;
 }
 
 .z-0 {
@@ -140,4 +152,9 @@ p {
 .py-2 {
   padding-top: 1rem;
   padding-bottom: 1rem;
+}
+
+//custom cursor type
+.cursor-pointer {
+  cursor: pointer;
 }
