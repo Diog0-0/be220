@@ -5,24 +5,20 @@
       <ion-menu-button color="light" mode="ios" />
 
       <!-- logo or img start -->
-      <app-logo style="flex: 1" />
+      <app-logo class="flex-1" />
       <!-- notification button start -->
       <app-notification />
     </div>
     <!-- avatar section start -->
     <div class="avatar-container flex my-2">
-      <ion-avatar
-        slot="start"
-        class="cursor-pointer"
-        style="height: 70px; width: 70px"
-      >
+      <ion-avatar slot="start" class="cursor-pointer">
         <img
           alt="Silhouette of a person's head"
           [src]="user.avatar_path ? user.avatar_path : 'https://ionicframework.com/docs/img/demos/avatar.svg'"
         />
       </ion-avatar>
 
-      <div class="flex-col ml-2">
+      <div class="flex-col justify-center ml-2">
         <ion-text class="avatar-name">{{user.name}}</ion-text>
         <ion-text color="tertiary" class="avatar-level"
           >{{user.level}}</ion-text

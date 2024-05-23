@@ -34,6 +34,11 @@ ion-badge {
 .avatar-container {
   padding: 0 20px;
   width: 100%;
+
+  ion-avatar {
+    height: 70px;
+    width: 70px;
+  }
 }
 
 .avatar-name {
@@ -54,7 +59,7 @@ ion-badge {
 .extra-functions {
   background-color: #161616;
   border-radius: 20px;
-  width: 90%;
+  padding: 0 10px;
 }
 
 .extra-button {
