@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { IonModal } from '@ionic/angular';
 
 @Component({
   selector: 'app-notification',
@@ -6,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./notification.component.scss'],
 })
 export class NotificationComponent implements OnInit {
+  public isModalOpen: boolean = false;
   public newNotification: boolean = false;
 
   constructor() { }
@@ -15,9 +17,13 @@ export class NotificationComponent implements OnInit {
     this.checkNotifications()
   }
 
-  checkNotifications(){
+  checkNotifications() {
     //checa notificações e cria o tint
     this.newNotification = true;
+  }
+
+  setOpen(isOpen: boolean) {
+    this.isModalOpen = isOpen;
   }
 
 }
